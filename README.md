@@ -24,6 +24,7 @@ Soyez créatif tout le monde a accès à un llm mais seulement vous avez accès 
 2. Allez dans *Settings → Pages*. Sous *Build and deployment → Source*, choisissez **GitHub Actions**.
 3. Lancez une première publication : *Actions → Déployer sur GitHub Pages → Run workflow* (ou faites simplement un `git push`).
 4. Après 1 à 2 minutes, le jeu est en ligne à `https://<votre-utilisateur>.github.io/Grand-Truand-Abruti/`. L'adresse exacte s'affiche aussi dans *Settings → Pages* et dans le résumé du workflow.
+5. Affichez le lien du jeu sur la page du dépôt : sur la page d'accueil du fork, cliquez sur l'engrenage ⚙️ à côté de **About** (colonne de droite), cochez **« Use your GitHub Pages website »**, puis **Save changes**. L'adresse du jeu apparaît alors en haut à droite du dépôt, pour que tout le monde puisse y jouer en un clic.
 
 ### c) Travailler en local (chaque membre de l'équipe)
 
