@@ -1,0 +1,4 @@
+Tous les fichiers de ce dossier : Kenney (www.kenney.nl) — Creative Commons Zero (CC0)
+http://creativecommons.org/publicdomain/zero/1.0/
+Packs : Topdown Shooter, Racing Pack, Topdown Tanks, Particle Pack, Interface Sounds, Sci-Fi Sounds, Kenney Fonts.
+Noms de fichiers mis en minuscules ; les images du Particle Pack ont été réduites à 128 px.

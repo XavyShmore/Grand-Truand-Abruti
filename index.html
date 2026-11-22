@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Grand Truand Abruti</title>
+    <link rel="icon" href="data:," />
+    <style>html, body { margin: 0; height: 100%; background: #111; overflow: hidden; }</style>
+  </head>
+  <body>
+    <!-- Affiche les erreurs JavaScript en rouge par-dessus le jeu (plus besoin d'ouvrir la console) -->
+    <script>
+      window.onerror = (msg) => document.body.insertAdjacentHTML('beforeend',
+        `<pre style="position:fixed;inset:0 0 auto 0;margin:0;padding:12px;background:#b00020;color:#fff;font:16px monospace;white-space:pre-wrap">${msg}</pre>`);
+    </script>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
