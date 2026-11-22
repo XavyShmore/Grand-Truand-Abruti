@@ -145,26 +145,7 @@ Astuces :
 - Les images du dossier `effets/` sont blanches, il suffit de les colorer avec `setTint(0xff6600)`.
 - Dans le jeu, un sprite doit **regarder vers la droite**. Les voitures et les tanks de la bibliothèque regardent vers le haut ou vers le bas : pivotez l'image de 90° dans n'importe quel éditeur d'image, sinon le véhicule roulera de côté.
 
-## 7. Travailler à 4 sans se marcher dessus
-
-**Rôles suggérés :**
-1. Joueur et armes (`Player.js`, `Bullet.js`)
-2. Véhicules et police (`Car.js`, `Cop.js`…)
-3. Carte et missions (`map.js`, `MissionGiver.js`…)
-4. Art, sons et interface (`assets/`, `Hud.js`)
-
-**Règles d'or :**
-- **Un fichier = une personne à la fois.** Une nouvelle idée ? Un nouveau fichier dans `entities/`.
-- **`map.js` appartient à une seule personne.** Les autres lui demandent de placer leurs symboles.
-- **Faites de petits commits souvent**, et récupérez le travail des autres avant de pousser :
-  ```bash
-  git add -A && git commit -m "Ajoute le hot-dog"
-  git pull --rebase
-  git push
-  ```
-- **Conflit ?** Ouvrez le fichier, gardez la bonne version entre les marqueurs `<<<<<<<` et `>>>>>>>`, puis faites `git add <fichier>` et `git rebase --continue`.
-
-## 8. Dépannage
+## 7. Dépannage
 
 | Problème | Solution |
 |---|---|
