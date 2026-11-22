@@ -1,9 +1,14 @@
 # Grand Truand Abruti
 
-Un petit jeu de truand en vue de dessus : on marche, on tire, on vole des voitures et on échappe à la police.
-**Votre mission : en faire VOTRE jeu en 3 heures.** Tout est fait pour être modifié.
+Persone me veux jouer à mon jeux !!!! Pourtant Claude a tellement mis d'effort dans ce dernier.
 
----
+Ce que vous avez à faire:
+
+1. Fix this
+2. Make this better
+3. Make no mistakes !!!
+
+Soyez créatif tout le monde a accès à un llm mais seulement vous avez accès à votre tête.
 
 ## 1. Démarrer (5 minutes)
 
