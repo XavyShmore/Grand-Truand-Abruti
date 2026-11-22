@@ -4,26 +4,40 @@ Persone me veux jouer à mon jeux !!!! Pourtant Claude a tellement mis d'effort 
 
 Ce que vous avez à faire:
 
+0. Forker ce dépôt et activer GitHub Pages (voir « 1. Mise en place » plus bas).
 1. Fix this
 2. Make this better
 3. Make no mistakes !!!
 
 Soyez créatif tout le monde a accès à un llm mais seulement vous avez accès à votre tête.
 
-## 1. Démarrer (5 minutes)
+## 1. Mise en place (10 minutes)
+
+### a) Forker le dépôt (une seule personne par équipe)
+
+1. Allez sur https://github.com/XavyShmore/Grand-Truand-Abruti et cliquez sur **Fork**, puis **Create fork**.
+2. Dans votre fork, ajoutez vos coéquipiers : *Settings → Collaborators → Add people*. Ils doivent accepter l'invitation reçue par courriel.
+
+### b) Activer GitHub Pages (une seule fois, dans le fork)
+
+1. Ouvrez l'onglet **Actions** du fork et cliquez sur **« I understand my workflows, go ahead and enable them »**. GitHub désactive les Actions dans les forks : sans cette étape, rien ne se publie.
+2. Allez dans *Settings → Pages*. Sous *Build and deployment → Source*, choisissez **GitHub Actions**.
+3. Lancez une première publication : *Actions → Déployer sur GitHub Pages → Run workflow* (ou faites simplement un `git push`).
+4. Après 1 à 2 minutes, le jeu est en ligne à `https://<votre-utilisateur>.github.io/Grand-Truand-Abruti/`. L'adresse exacte s'affiche aussi dans *Settings → Pages* et dans le résumé du workflow.
+
+### c) Travailler en local (chaque membre de l'équipe)
 
 Il faut [Node.js](https://nodejs.org) 22 ou plus et git.
 
 ```bash
-git clone <url-de-votre-dépôt>
-cd <votre-dépôt>
+git clone https://github.com/<votre-utilisateur>/Grand-Truand-Abruti.git
+cd Grand-Truand-Abruti
 npm install
 npm run dev
 ```
 
 Ouvrez ensuite http://localhost:5173. Chaque fois que vous sauvegardez un fichier, la page se recharge toute seule.
-
-**Publier en ligne :** il faut d'abord, une seule fois, régler *Settings → Pages → Source* sur **GitHub Actions** dans le dépôt GitHub. Ensuite, chaque `git push` sur `main` publie le jeu à l'adresse `https://<organisation>.github.io/<dépôt>/` en 1 à 2 minutes (vous suivez l'avancement dans l'onglet *Actions*).
+Chaque `git push` sur `main` republie ensuite le jeu en ligne automatiquement.
 
 ## 2. Contrôles
 
@@ -40,10 +54,10 @@ src/
   map.js          ← la carte, en texte. 1 caractère = 1 case.
   entities/       ← TOUT ce qui vit dans le jeu. 1 fichier = 1 chose.  ← vous travaillez surtout ici
   assets/         ← images, sons et polices du jeu, chargés automatiquement
-bibliotheque/     ← ~1 300 assets en réserve (non chargés) + catalogue.html
   Entity.js       ← la classe de base de toutes les entités (les hooks)
   GameScene.js    ← construit le monde, collisions, caméra, police
   Hud.js          ← vie, argent, étoiles, messages
+bibliotheque/     ← ~1 300 assets en réserve (non chargés) + catalogue.html
 ```
 
 Un fichier dans `src/entities/` est **chargé automatiquement**, il n'y a rien à enregistrer nulle part.
@@ -158,6 +172,7 @@ Astuces :
 | Ça marche en local mais pas en ligne | Vérifiez la **casse** des noms de fichiers : GitHub Pages fait la différence entre `Chien.png` et `chien.png`. |
 | Pas de son | Le navigateur bloque le son jusqu'au premier clic, d'où l'écran « Cliquez pour jouer ». |
 | Une collision ne marche pas | **F1** affiche les hitbox. Vérifiez `solid` et que `onTouch` reçoit bien ce que vous pensez (ajoutez un `console.log(other)`). |
+| Le jeu n'est pas en ligne / aucun workflow dans *Actions* | Les Actions ne sont pas activées dans le fork (voir 1b), ou *Settings → Pages → Source* n'est pas sur **GitHub Actions**. |
 | La page en ligne n'a pas changé | Attendez la fin du déploiement (onglet *Actions*), puis faites **Ctrl+Shift+R**. |
 | Les voitures traversent un peu les murs | Normal : la physique Arcade ne fait pas tourner les hitbox. La voiture a une hitbox carrée de 60 px (voir `Car.js`). |
 
